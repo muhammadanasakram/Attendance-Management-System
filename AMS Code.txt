@@ -1,0 +1,74 @@
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    class_section VARCHAR(20),
+    contact_info VARCHAR(100),
+    attendance_status VARCHAR(10),
+    attendance_history VARCHAR(100),
+    time_in_out DATETIME,
+    absence_reason VARCHAR(100),
+    attendance_notifications VARCHAR(100)
+);
+
+CREATE TABLE Classes (
+    class_id INT PRIMARY KEY,
+    class_name VARCHAR(50),
+    class_description VARCHAR(100),
+    start_date DATE,
+    end_date DATE,
+    class_schedule VARCHAR(100),
+    instructor_name VARCHAR(50),
+    attendance_policy VARCHAR(100),
+    grading_policy VARCHAR(100),
+    location VARCHAR(100)
+);
+
+CREATE TABLE Attendance_Records (
+    record_id INT PRIMARY KEY,
+    date DATE,
+    id_number INT,
+    student_name VARCHAR(50),
+    class_section VARCHAR(20),
+    time_in DATETIME,
+    time_out DATETIME,
+    teacher_signature VARCHAR(50)
+);
+
+CREATE TABLE Vehicle_Track_For_Attendance (
+    vehicle_id INT PRIMARY KEY,
+    date DATE,
+    driver_name VARCHAR(50),
+    driver_id INT,
+    starting_location VARCHAR(100),
+    ending_location VARCHAR(100)
+);
+
+CREATE TABLE Camera_Based_AI (
+    camera_id INT PRIMARY KEY,
+    camera_type VARCHAR(50),
+    image_quality VARCHAR(20),
+    processing_power VARCHAR(20),
+    object_detection VARCHAR(20),
+    alert_system VARCHAR(20),
+    data_storage VARCHAR(50)
+);
+
+CREATE TABLE Biometric (
+    biometric_id INT PRIMARY KEY,
+    universality VARCHAR(20),
+    performance VARCHAR(20),
+    acceptability VARCHAR(20),
+    resistance_to_spoofing VARCHAR(20),
+    scalability VARCHAR(20),
+    interoperability VARCHAR(20)
+);
+
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    syllabus VARCHAR(100),
+    level VARCHAR(20),
+    credit_hours INT,
+    prerequisites VARCHAR(100),
+    instructor_name VARCHAR(50),
+    learning_activities VARCHAR(100)
+);
